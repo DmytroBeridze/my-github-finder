@@ -1,0 +1,46 @@
+import { useEffect, useState } from "react";
+import { Container } from "../../components/Container/Container";
+import { Header } from "../../components/Header";
+import styles from "./HomePage.module.scss";
+import { SearchForm } from "../../components/SearchForm";
+
+export const HomePage = () => {
+  const URL = "https://api.github.com/users/";
+  const [theme, setTheme] = useState<boolean>(false);
+  const [user, setUser] = useState<string>("");
+  const themeChange = () => {
+    setTheme(!theme);
+  };
+
+  const searchUser = async (name: string): Promise<void> => {
+    if (name.trim()) {
+      try {
+        const response = await fetch(URL + name);
+        if (response.ok) {
+          const dataUser = await response.json();
+
+          
+        } else throw new Error("Error request");
+      } catch (error) {
+        if (error instanceof Error) {
+          console.error(error.message);
+        }
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (theme) {
+      document.body.setAttribute("data-theme", "dark");
+    } else document.body.setAttribute("data-theme", "light");
+  }, [theme]);
+
+  return (
+    <div className={styles.homePage}>
+      <Container>
+        <Header themeChange={themeChange} theme={theme} />
+        <SearchForm searchUser={searchUser} />
+      </Container>
+    </div>
+  );
+};

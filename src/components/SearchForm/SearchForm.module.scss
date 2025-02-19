@@ -1,0 +1,45 @@
+@import "../../style/variables.scss";
+
+:global {
+  body[data-theme="dark"] {
+    --form-background: #{$card-theme-dark};
+    --form-font: #{$font-theme-dark};
+  }
+  body[data-theme="light"] {
+    --form-background: #{$card-theme-light};
+    --form-font: #{$font-theme-light};
+  }
+}
+
+.searchForm {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: $shaddow;
+  height: 70px;
+  padding: 0 20px;
+  border-radius: 8px;
+  background-color: var(--form-background);
+}
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  fill: $theme-color-purple;
+}
+.input {
+  flex-grow: 1;
+  margin: 0 20px;
+  height: 40px;
+  border: none;
+  background-color: inherit;
+  font-size: 18px;
+  color: var(--form-font);
+  &::placeholder {
+    font-size: 18px;
+    color: var(--form-font);
+  }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}

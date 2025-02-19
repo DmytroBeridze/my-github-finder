@@ -40,5 +40,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/webpack": "^8.1.0",
+    "@types/css-modules": "^1.0.5",
+    "sass": "^1.85.0"
   }
 }

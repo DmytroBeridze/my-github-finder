@@ -1,0 +1,35 @@
+// @import "./variables.scss";
+@use "./variables.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: $bg-theme-light;
+  color: $font-theme-light;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body[data-theme="dark"] {
+  background-color: $bg-theme-dark;
+  // color: $font-theme-dark;
+}
+body[data-theme="light"] {
+  background-color: $bg-theme-light;
+  // color: $font-theme-light;
+}

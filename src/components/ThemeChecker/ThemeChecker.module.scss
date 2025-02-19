@@ -1,0 +1,31 @@
+@import "../../style/variables.scss";
+
+:global {
+  body[data-theme="dark"] {
+    --font-color-checker: #{$font-theme-dark};
+    --hover-font-color-checker: #{$theme-color-purple};
+  }
+  body[data-theme="light"] {
+    --font-color-checker: #{$font-theme-light};
+    --hover-font-color-checker: #{$icon-hover-light};
+  }
+}
+
+.themeChecker {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--font-color-checker);
+  &:hover {
+    color: var(--hover-font-color-checker);
+    .themeChecker__icon {
+      fill: var(--hover-font-color-checker);
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--font-color-checker);
+  }
+}

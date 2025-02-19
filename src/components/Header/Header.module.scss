@@ -1,0 +1,21 @@
+@import "../../style/variables.scss";
+
+:global {
+  body[data-theme="dark"] {
+    --label-font: #{$header-theme-dark};
+  }
+  body[data-theme="light"] {
+    --label-font: #{$header-theme-light};
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+
+  & h3 {
+    color: var(--label-font);
+  }
+}

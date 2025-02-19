@@ -1,0 +1,13 @@
+@import "../../style/variables.scss";
+
+.button {
+  padding: 12px 20px;
+  background-color: $theme-color-purple;
+  border: none;
+  border-radius: 8px;
+  color: $header-theme-dark;
+  cursor: pointer;
+  &:hover {
+    background-color: $theme-color-purple-hover;
+  }
+}
