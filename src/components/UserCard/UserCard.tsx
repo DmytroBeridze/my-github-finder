@@ -1,5 +1,6 @@
 import { User } from "../../types/userTypes";
 import { UserInfo } from "../UserInfo";
+import { UserMeta } from "../UserMeta";
 import { UserPhoto } from "../UserPhoto";
 import { UserStats } from "../UserStats/UserStats";
 import styles from "./UserCard.module.scss";
@@ -28,6 +29,13 @@ export const UserCard = ({ user }: UserCardProps) => {
           repos={user.repos}
           followers={user.followers}
           following={user.following}
+        />
+
+        <UserMeta
+          blog={user.blog}
+          company={user.company}
+          location={user.location}
+          twitter={user.twitter}
         />
       </div>
     )

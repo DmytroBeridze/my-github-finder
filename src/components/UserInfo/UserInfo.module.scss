@@ -2,21 +2,22 @@
 .userInfo {
   display: flex;
   justify-content: space-between;
+
+  & ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & > :nth-child(3),
+    & > :nth-child(4) {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
 }
 .userInfoName {
   font-size: 20px;
   font-weight: 700;
-}
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  & > :nth-child(3),
-  & > :nth-child(4) {
-    font-size: 16px;
-    font-weight: 500;
-  }
 }
 
 .mail {
