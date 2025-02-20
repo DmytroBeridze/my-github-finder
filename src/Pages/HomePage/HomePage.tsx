@@ -3,24 +3,28 @@ import { Container } from "../../components/Container/Container";
 import { Header } from "../../components/Header";
 import styles from "./HomePage.module.scss";
 import { SearchForm } from "../../components/SearchForm";
+import { GithubUser, User, UserError } from "../../types/userTypes";
+import { userGuards } from "../../guards/userGuards";
+import { reFormattingUser } from "../../utils/reFormattingUser";
+import { fakeUser } from "../../components/fakeUser";
 
 export const HomePage = () => {
   const URL = "https://api.github.com/users/";
   const [theme, setTheme] = useState<boolean>(false);
-  const [user, setUser] = useState<string>("");
+  const [user, setUser] = useState<User | null>(fakeUser);
   const themeChange = () => {
     setTheme(!theme);
   };
-
   const searchUser = async (name: string): Promise<void> => {
     if (name.trim()) {
       try {
         const response = await fetch(URL + name);
-        if (response.ok) {
-          const dataUser = await response.json();
+        if (!response.ok) throw new Error("Error request");
 
-          
-        } else throw new Error("Error request");
+        const dataUser = (await response.json()) as GithubUser | UserError;
+        if (userGuards(dataUser)) {
+          setUser(reFormattingUser(dataUser));
+        } else setUser(null);
       } catch (error) {
         if (error instanceof Error) {
           console.error(error.message);
@@ -28,6 +32,7 @@ export const HomePage = () => {
       }
     }
   };
+  console.log(user);
 
   useEffect(() => {
     if (theme) {

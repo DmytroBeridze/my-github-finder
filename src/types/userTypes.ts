@@ -1,31 +1,41 @@
-export interface GithubUser {
-    login	"DmytroBeridze"
-   
-    
-    avatar_url	"https://avatars.githubusercontent.com/u/98057267?v=4"
-
-    url	"https://api.github.com/users/DmytroBeridze"
-    html_url	"https://github.com/DmytroBeridze"
- 
-  
-    name	"DmytroBeridze"
-    company	null
-    blog	""
-    location	null
-    email	null
-    bio	null
-    twitter_username	null
-    public_repos	23
-    public_gists	0
-    followers	2
-    following	1
-    created_at	"2022-01-19T20:38:07Z"
-
-
-
-
+export interface User {
+  login: string;
+  avatar: string;
+  url: string;
+  html: string;
+  name: string;
+  company: string | null;
+  blog: string;
+  location: string | null;
+  email: string | null;
+  bio: string | null;
+  twitter: string | null;
+  repos: number;
+  gists: number;
+  followers: number;
+  following: number;
+  createdAt: string;
 }
-export interface userError {
+
+export interface GithubUser {
+  login: string;
+  avatar_url: string;
+  url: string;
+  html_url: string;
+  name: string;
+  company: string | null;
+  blog: string;
+  location: string | null;
+  email: string | null;
+  bio: string | null;
+  twitter_username: string | null;
+  public_repos: number;
+  public_gists: number;
+  followers: number;
+  following: number;
+  created_at: string;
+}
+export interface UserError {
   message: string;
   documentation_url: string;
   status: string;
