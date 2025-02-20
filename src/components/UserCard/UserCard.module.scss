@@ -1,0 +1,14 @@
+@import "../../style/variables.scss";
+.userCard {
+  width: 100%;
+  box-shadow: $shaddow;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--form-background);
+  color: var(--form-font);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 150px 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
+}

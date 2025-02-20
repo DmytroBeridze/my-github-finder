@@ -1,0 +1,30 @@
+@import "../../style/variables.scss";
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.userInfoName {
+  font-size: 20px;
+  font-weight: 700;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  & > :nth-child(3),
+  & > :nth-child(4) {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.mail {
+  color: var(--form-font);
+}
+.noElement {
+  color: $error-color;
+}
+.userInfoDate {
+  font-size: 14px;
+}

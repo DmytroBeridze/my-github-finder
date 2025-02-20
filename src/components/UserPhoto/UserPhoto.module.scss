@@ -1,0 +1,13 @@
+.userPhoto {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  justify-self: center;
+  align-self: center;
+  & img {
+    width: 100%;
+  }
+}

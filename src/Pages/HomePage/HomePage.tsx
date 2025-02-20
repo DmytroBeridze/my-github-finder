@@ -7,6 +7,7 @@ import { GithubUser, User, UserError } from "../../types/userTypes";
 import { userGuards } from "../../guards/userGuards";
 import { reFormattingUser } from "../../utils/reFormattingUser";
 import { fakeUser } from "../../components/fakeUser";
+import { UserCard } from "../../components/UserCard";
 
 export const HomePage = () => {
   const URL = "https://api.github.com/users/";
@@ -19,7 +20,7 @@ export const HomePage = () => {
     if (name.trim()) {
       try {
         const response = await fetch(URL + name);
-        if (!response.ok) throw new Error("Error request");
+        // if (!response.ok) throw new Error("Error request");
 
         const dataUser = (await response.json()) as GithubUser | UserError;
         if (userGuards(dataUser)) {
@@ -32,7 +33,6 @@ export const HomePage = () => {
       }
     }
   };
-  console.log(user);
 
   useEffect(() => {
     if (theme) {
@@ -44,7 +44,8 @@ export const HomePage = () => {
     <div className={styles.homePage}>
       <Container>
         <Header themeChange={themeChange} theme={theme} />
-        <SearchForm searchUser={searchUser} />
+        <SearchForm searchUser={searchUser} user={user} />
+        <UserCard user={user} />
       </Container>
     </div>
   );
