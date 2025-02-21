@@ -7,6 +7,11 @@
 
   justify-self: center;
   align-self: center;
+
+  @media (max-width: 767px) and (min-width: 480px) {
+    width: 150px;
+    height: 150px;
+  }
   & img {
     width: 100%;
   }

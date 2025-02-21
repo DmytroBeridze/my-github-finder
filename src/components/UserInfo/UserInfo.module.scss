@@ -1,9 +1,14 @@
 @import "../../style/variables.scss";
+
 .userInfo {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 
   & ul {
+    flex-basis: 70%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -12,6 +17,12 @@
     & > :nth-child(4) {
       font-size: 16px;
       font-weight: 500;
+      & span {
+        font-size: 14px;
+      }
+    }
+    & span {
+      margin-left: 10px;
     }
   }
 }
@@ -23,9 +34,11 @@
 .mail {
   color: var(--form-font);
 }
-.noElement {
-  color: $error-color;
-}
+
+// :global(.noElement) {
+//   color: $error-color;
+// }
+
 .userInfoDate {
   font-size: 14px;
 }

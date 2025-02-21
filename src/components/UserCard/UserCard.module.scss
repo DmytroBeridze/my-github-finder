@@ -3,12 +3,18 @@
   width: 100%;
   box-shadow: $shaddow;
   margin-top: 40px;
-  padding: 20px;
+  padding: 40px;
   border-radius: 8px;
   background-color: var(--form-background);
   color: var(--form-font);
   display: grid;
   gap: 20px;
   grid-template-columns: 150px 1fr;
-  // grid-template-rows: 1fr 1fr 1fr;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 200px 1fr;
+  }
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }

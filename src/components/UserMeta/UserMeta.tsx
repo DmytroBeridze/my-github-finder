@@ -39,10 +39,22 @@ export const UserMeta = ({ ...props }: UserMetaProps) => {
   return (
     <ul className={styles.meta}>
       {metaData.map(({ value, icon, isLink }, i) => {
+        let link = value?.startsWith("http") ? value : `https://${value}`;
+
+        const data =
+          value && isLink ? (
+            <a href={link}>{value}</a>
+          ) : (
+            <span className={!value ? `noElement` : ""}>
+              {value || "no data"}
+            </span>
+          );
+        console.log(link);
+
         return (
           <li key={i}>
             <span>{icon} </span>
-            <span>{value || "no data"}</span>
+            {data}
           </li>
         );
       })}

@@ -21,6 +21,7 @@ export const SearchForm = ({ searchUser, user }: SearchFormProps) => {
         className={styles.input}
         placeholder="Search GitHub username..."
         name="user"
+        autoComplete="off"
       />
 
       {user ? null : <span className={styles.noUser}>User not found</span>}

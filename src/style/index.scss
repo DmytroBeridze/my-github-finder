@@ -33,3 +33,8 @@ body[data-theme="light"] {
   background-color: $bg-theme-light;
   // color: $font-theme-light;
 }
+
+.noElement {
+  color: $error-color !important;
+  font-size: 12px !important;
+}

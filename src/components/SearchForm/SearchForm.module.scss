@@ -17,9 +17,18 @@
   align-items: center;
   box-shadow: $shaddow;
   height: 70px;
-  padding: 0 20px;
   border-radius: 8px;
+  padding: 0 40px;
   background-color: var(--form-background);
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px 40px;
+    gap: 10px;
+    & button {
+      width: 100%;
+    }
+  }
 }
 .searchIcon {
   width: 20px;

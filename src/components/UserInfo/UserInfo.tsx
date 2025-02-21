@@ -28,16 +28,13 @@ export const UserInfo = ({ ...props }: UserInfoProps) => {
         <li>{props.name}</li>
         <li>
           email:
-          <span
-            className={`${styles.mail} ${props.email ? "" : styles.noElement}`}
-          >
+          <span className={`${styles.mail} ${props.email ? "" : "noElement"}`}>
             {` ${props.email || "no email"}`}
           </span>
         </li>
         <li>
-          {" "}
-          bio:{" "}
-          <span className={`${props.bio ? "" : styles.noElement}`}>
+          bio:
+          <span className={`${props.bio ? "" : "noElement"}`}>
             {props.bio || "no bio"}
           </span>
         </li>
