@@ -1,5 +1,6 @@
 // @import "./variables.scss";
 @use "./variables.scss" as *;
+@import "./global.scss";
 
 * {
   margin: 0;
@@ -26,12 +27,10 @@ body {
 }
 
 body[data-theme="dark"] {
-  background-color: $bg-theme-dark;
-  // color: $font-theme-dark;
+  // background-color: $bg-theme-dark;
 }
 body[data-theme="light"] {
-  background-color: $bg-theme-light;
-  // color: $font-theme-light;
+  // background-color: $bg-theme-light;
 }
 
 .noElement {
