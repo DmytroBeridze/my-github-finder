@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container } from "../../components/Container/Container";
 import { Header } from "../../components/Header";
-import styles from "./HomePage.module.scss";
 import { SearchForm } from "../../components/SearchForm";
 import { GithubUser, User, UserError } from "../../types/userTypes";
 import { userGuards } from "../../guards/userGuards";
@@ -41,7 +40,7 @@ export const HomePage = () => {
   }, [theme]);
 
   return (
-    <div className={styles.homePage}>
+    <div>
       <Container>
         <Header themeChange={themeChange} theme={theme} />
         <SearchForm searchUser={searchUser} user={user} />

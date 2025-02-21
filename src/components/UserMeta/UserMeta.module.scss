@@ -1,16 +1,5 @@
 @import "../../style/variables.scss";
 
-:global {
-  body[data-theme="dark"] {
-    --icon-color: #{$theme-color-purple};
-    --link-color: #{$linc-volor-blue};
-  }
-  body[data-theme="light"] {
-    --icon-color: #{$linc-volor-blue};
-    --link-color: #{$theme-color-purple};
-  }
-}
-
 .meta {
   grid-column: 2/3;
   display: grid;

@@ -12,6 +12,7 @@ export const SearchForm = ({ searchUser, user }: SearchFormProps) => {
   const hendleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     searchUser(e.currentTarget.user.value.trim());
+    e.currentTarget.reset();
   };
   return (
     <form className={styles.searchForm} onSubmit={(e) => hendleSubmit(e)}>

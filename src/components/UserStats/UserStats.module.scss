@@ -1,16 +1,5 @@
 @import "../../style/variables.scss";
 
-:global {
-  body[data-theme="dark"] {
-    --background-color: #{$bg-theme-dark};
-    --underline-color: #{$theme-color-purple};
-  }
-  body[data-theme="light"] {
-    --background-color: #{$bg-theme-light};
-    --underline-color: #{$theme-color-purple};
-  }
-}
-
 .userStats {
   list-style: none;
   grid-column: 2/3;

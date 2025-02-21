@@ -1,0 +1,34 @@
+body[data-theme="dark"] {
+  background-color: $bg-theme-dark;
+
+  --label-font: #{$header-theme-dark};
+
+  --form-background: #{$card-theme-dark};
+  --form-font: #{$font-theme-dark};
+
+  --font-color-checker: #{$font-theme-dark};
+  --hover-font-color-checker: #{$theme-color-purple};
+
+  --icon-color: #{$theme-color-purple};
+  --link-color: #{$linc-volor-blue};
+
+  --background-color: #{$bg-theme-dark};
+  --underline-color: #{$theme-color-purple};
+}
+body[data-theme="light"] {
+  background-color: $bg-theme-light;
+
+  --label-font: #{$header-theme-light};
+
+  --form-background: #{$card-theme-light};
+  --form-font: #{$font-theme-light};
+
+  --font-color-checker: #{$font-theme-light};
+  --hover-font-color-checker: #{$icon-hover-light};
+
+  --icon-color: #{$linc-volor-blue};
+  --link-color: #{$theme-color-purple};
+
+  --background-color: #{$bg-theme-light};
+  --underline-color: #{$theme-color-purple};
+}
